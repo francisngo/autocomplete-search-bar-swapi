@@ -13,8 +13,9 @@ export default class App extends Component {
     this.state = {
       value: '',
       options: [],
+      showOptions: false,
       character: {},
-      homeworld: {},
+      homeworld: {}
     };
 
     this.onClick = this.onClick.bind(this);
@@ -26,6 +27,7 @@ export default class App extends Component {
     return axios.get(homeworld)
     .then(home => {
       this.setState({
+        showOptions: false,
         character: item,
         homeworld: home.data
       })
@@ -35,6 +37,7 @@ export default class App extends Component {
 
   onChange(event) {
     this.setState({
+      showOptions: true,
       value: event.target.value
     });
     axios.get(`https://swapi.co/api/people/?search=${this.state.value}`)
@@ -47,7 +50,7 @@ export default class App extends Component {
   }
 
   render() {
-    const { value, options, character, homeworld } = this.state;
+    const { value, options, showOptions, character, homeworld } = this.state;
     return (
       <div className="app">
         <div className="jumbotron text-center">
@@ -61,6 +64,7 @@ export default class App extends Component {
               onChange={ this.onChange }
             />
             <Options
+              showOptions={ showOptions }
               options={ options }
               onClick={ this.onClick }
             />
