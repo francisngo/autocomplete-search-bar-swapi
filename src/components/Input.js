@@ -20,6 +20,6 @@ export default class Input extends Component {
           onChange={ onChange }
         />
       </div>
-    )
+    );
   }
 }

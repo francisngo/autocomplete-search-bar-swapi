@@ -13,12 +13,18 @@ export default class Options extends Component {
       <div className="options__list">
         { this.props.options.length > 0 && this.props.options.map( (item, index) => {
           return (
-            <div key={ index } className="options__item" onClick={ () => onClick(item) }>
-              <span className="options__text">{ item.name }</span>
+            <div
+              key={ index }
+              className="options__item"
+              onClick={ () => onClick(item) }
+            >
+              <span className="options__text">
+                { item.name }
+              </span>
             </div>
-          )
+          );
         } ) }
       </div>
-    )
+    );
   }
 }

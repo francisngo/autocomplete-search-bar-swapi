@@ -6,7 +6,7 @@ import Input from './Input';
 import Options from './Options';
 import Character from './Character';
 
-class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
 
@@ -37,7 +37,6 @@ class App extends Component {
     this.setState({
       value: event.target.value
     });
-
     axios.get(`https://swapi.co/api/people/?search=${this.state.value}`)
     .then(character => {
       this.setState({
@@ -53,7 +52,9 @@ class App extends Component {
       <div className="app">
         <div className="jumbotron text-center">
           <h1 className="jumbotron__heading">Star Wars Character API</h1>
-          <p className="jumbotron__lead text-muted">Using SWAPI API, search for your favorite Star Wars characters.</p>
+          <p className="jumbotron__lead text-muted">
+            Using SWAPI API, search for your favorite Star Wars characters.
+          </p>
           <div className="jumbotron__search">
             <Input
               value={ value }
@@ -67,10 +68,9 @@ class App extends Component {
         </div>
         <Character
           character={ character }
-          homeworld={ homeworld }/>
+          homeworld={ homeworld }
+        />
       </div>
     );
   }
 }
-
-export default App;
