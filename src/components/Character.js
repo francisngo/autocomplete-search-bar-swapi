@@ -4,6 +4,8 @@ import '../styles/Character.css';
 
 class Character extends Component {
   static propTypes = {
+    character: PropTypes.object.isRequired,
+    homeworld: PropTypes.object.isRequired,
     name: PropTypes.string,
     height: PropTypes.string,
     gender: PropTypes.string,

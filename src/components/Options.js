@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import '../styles/Options.css';
 
 export default class Options extends Component {
+  static propTypes = {
+    onClick: PropTypes.func.isRequired,
+    options: PropTypes.array
+  }
   render() {
-
     const { onClick } = this.props;
     return (
       <div className="options__list">
