@@ -1,0 +1,24 @@
+.jumbotron {
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526);
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: .3rem;
+  color: #fff;
+}
+
+.jumbotron__heading {
+  font-weight: 300;
+}
+
+.jumbotron__lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.jumbotron__search {
+  min-width: 350px;
+  max-width: 35%;
+  margin: 0 auto;
+}

@@ -1,0 +1,15 @@
+.character__info {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  min-width: 350px;
+  max-width: 35%;
+  border: 5px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  padding: 1.25rem;
+  margin: 0 auto;
+}
+
+.character__text {
+  text-align: left;
+}
