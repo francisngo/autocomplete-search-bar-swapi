@@ -6,7 +6,7 @@ Live demo:
 https://stormy-falls-32446.herokuapp.com/
 
 ### Instructions
-To contribute, download the zip or clone the repository:
+Download the zip or clone the repository:
 https://github.com/francisngo/autocomplete-search-bar-swapi.git
 
 Change directory into project folder and install packages:
